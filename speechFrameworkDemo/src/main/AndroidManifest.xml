@@ -4,6 +4,12 @@
     package="com.ubtrobot.mini.speech.framework.demo">
 
   <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+  <!-- for accessing files in sd card (not sure if it works) -->
+  <!--  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
 
   <application
       android:name=".SpeechApplication"
@@ -28,7 +34,7 @@
           android:name="master.service"
           android:resource="@xml/service_demo" />
     </service>
-    <meta-data android:name="ubt-master-app" android:value="third_part_speechservice"/>
+    <meta-data android:name="ubt-master-app" android:value="third_part_speechservice" />
   </application>
 
 </manifest>
