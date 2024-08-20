@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 
+import com.microsoft.cognitiveservices.speech.SpeechConfig;
 import com.ubt.speecharray.DataCallback;
 import com.ubt.speecharray.MicArrayUtils;
 import com.ubtechinc.mini.weinalib.WeiNaMicApi;
@@ -22,13 +23,14 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 
+
+
 public class MainActivity extends AppCompatActivity {
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-//    micArrayTest();
   }
 
 
@@ -102,33 +104,4 @@ public class MainActivity extends AppCompatActivity {
       Log.e("", "Error uploading file: " + e.getMessage());
     }
   }
-
-
-//  this is the method provided in the demo for acquiring original audio data of microphone
-//      private void micArrayTest() {
-//        final MicArrayUtils micArrayUtils = new MicArrayUtils(this.getApplicationContext(),16000,16,512);
-//        //init
-//        micArrayUtils.init();
-//        //set Callback to receive audio data
-//        micArrayUtils.setDataCallback(new DataCallback() {
-//            @Override
-//            public void onAudioData(byte[] bytes) {
-//                // 6 channels data, 1-4: mic data, 5-6: ref data
-//                Log.d("Main Activity","onAudioData---bytes.length = "+bytes.length);
-//                byte[][] spliteData = MicArrayUtils.spliteData(bytes);
-//            }
-//        });
-//        //start mic Array
-//        micArrayUtils.startRecord();
-//        Log.i("Main Activity","Start Record");
-//
-//        //save pcm data in sdcard (path : /sdcard/micdata/)
-//        micArrayUtils.setSaveOriginalAudio(true);
-//        Log.i("Main Activity","Save Recording");
-//
-//        //stop mic Array
-////        micArrayUtils.stopRecord();
-////        Log.i("Main Activity","Stop Recording");
-//
-//    }
 }

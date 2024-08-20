@@ -26,7 +26,12 @@ public class PcmToWavConverter {
             Log.i("Pcm To Wav Converter", "Pcm to Wav conversion completed");
 
             //upload file to flask server (laptop) in background
-            AsyncTask<String, Void, Boolean> task = new FileUploadTask().execute(wavFile.getPath(), "http://192.168.4.164:5000/upload");
+
+            //Wifi: IC Mesh
+//            AsyncTask<String, Void, Boolean> task = new FileUploadTask().execute(wavFile.getPath(), "http://192.168.4.164:5000/upload");
+            //Wifi: W402e
+            AsyncTask<String, Void, Boolean> task = new FileUploadTask().execute(wavFile.getPath(), "http://192.168.49.196:5000/upload");
+
 
         } catch (IOException e) {
             Log.e("Pcm To Wav Converter", e.getMessage());

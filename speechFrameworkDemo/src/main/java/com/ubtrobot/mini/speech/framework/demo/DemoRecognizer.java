@@ -37,7 +37,6 @@ public class DemoRecognizer extends AbstractRecognizer {
 
     //register state listener for Tencent Vad Recorder
     recorder.registerStateListener(new AudioRecordStateListener() {
-      //this function will be called on state change
       @Override
       public void onStateChanged(int i, RecordException e) {
         //int i: new state
@@ -57,7 +56,7 @@ public class DemoRecognizer extends AbstractRecognizer {
 
     byteArrayOutputStream = new ByteArrayOutputStream();
     recorder.registerRecordListener(new AudioRecordListener() {
-      //this method is called when TencentVadRecorder detects someone speaking
+      //onRecord() is called when TencentVadRecorder detects someone speaking
       @Override public void onRecord(byte[] asrData, int length) {
         //asrData: pcm, 16000 sampleRate, 8bit
         //****************** BITS PER SAMPLE IS IN FACT 16 BITS NOT 8 BITS ******************
@@ -86,6 +85,11 @@ public class DemoRecognizer extends AbstractRecognizer {
       PcmToWavConverter.convertPcmToWav(recordedData);
       //clear the content of byteArrayOutputStream
       byteArrayOutputStream.reset();
+
+      //start the recorder again for continuous conversation
+      //the recorder should be started after the response is played
+      //a timeout should be set to stop the recording when there is no voice activity detected
+//      recorder.start();
 
     } else {
 
