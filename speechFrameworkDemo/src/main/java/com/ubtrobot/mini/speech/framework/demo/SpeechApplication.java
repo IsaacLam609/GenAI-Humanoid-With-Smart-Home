@@ -89,6 +89,9 @@ public class SpeechApplication extends AbstractSpeechApplication {
     private final String SpeechSynthesisTag = "Speech Synthesis";
     // </Azure Text to Speech>
 
+    // Flask Client
+    private HttpClient httpClient;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -116,6 +119,9 @@ public class SpeechApplication extends AbstractSpeechApplication {
                     Log.d("Logic", "Speech Service create ok..");
                     moduleCreatedNotifier.notifyModuleCreated(DemoSpeech.INSTANCE.createSpeechService());
                 }));
+
+        // Flask Client
+        httpClient = new HttpClient();
 
         // <Azure Text to Speech>
         singleThreadExecutor = Executors.newSingleThreadExecutor();
@@ -204,8 +210,9 @@ public class SpeechApplication extends AbstractSpeechApplication {
 
                         if (!Objects.equals(recognitionResult, "")) {
                             // text generation
+                            String generatedText = MqttHomeAssistant.publishAndSubscribe(recognitionResult);
                             // tts and play
-                            synthesiseSpeech(recognitionResult);
+                            synthesiseSpeech(generatedText);
                         }
 
                     });
