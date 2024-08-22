@@ -287,12 +287,13 @@ public class SpeechApplication extends AbstractSpeechApplication {
             e.close();
         });
 
-        synthesizer.Synthesizing.addEventListener((o, e) -> {
-            Log.i(SpeechSynthesisTag,String.format(current,
-                    "Synthesizing. received %d bytes.",
-                    e.getResult().getAudioLength()));
-            e.close();
-        });
+        // synthesizing event listener removed to prevent JNI ERROR (app bug): local reference table overflow (max=512)
+//        synthesizer.Synthesizing.addEventListener((o, e) -> {
+//            Log.i(SpeechSynthesisTag,String.format(current,
+//                    "Synthesizing. received %d bytes.",
+//                    e.getResult().getAudioLength()));
+//            e.close();
+//        });
 
         synthesizer.SynthesisCompleted.addEventListener((o, e) -> {
             Log.i(SpeechSynthesisTag,"Synthesis finished.");
@@ -309,19 +310,10 @@ public class SpeechApplication extends AbstractSpeechApplication {
                             System.lineSeparator() + "Did you update the subscription info?");
             e.close();
         });
-
-        synthesizer.WordBoundary.addEventListener((o, e) -> {
-            Log.i(SpeechSynthesisTag,String.format(current,
-                    "Word boundary. Text offset %d, length %d; audio offset %d ms.",
-                    e.getTextOffset(),
-                    e.getWordLength(),
-                    e.getAudioOffset() / 10000));
-
-        });
     }
 
     public void preEstablishSynthesiserConnection() {
-        // This method could pre-establish the connection to service to lower the latency
+        // Pre-establish the connection to service to lower the latency
         // This method is useful when you want to synthesize audio in a short time, but the text is
         // not available. E.g. for speech bot, you can warm up the TTS connection when the user is speaking;
         // then call speak() when dialogue utterance is ready.
