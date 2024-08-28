@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class MqttHomeAssistant {
     private static final String MqttClientTag = "MQTT";
-    /** MQTT server URL. Remember to include protocol and port number. */
+    /** MQTT server URL. */
     private static final String ServerUrl = Secrets.getMQTTServerUrl();
     /** Topic for publishing MQTT messages. */
     private static final String PublishTopic = "/alphamini/sendtoha";
