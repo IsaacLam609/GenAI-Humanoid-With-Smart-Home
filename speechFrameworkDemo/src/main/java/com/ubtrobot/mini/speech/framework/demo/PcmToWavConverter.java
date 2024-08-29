@@ -3,7 +3,8 @@ package com.ubtrobot.mini.speech.framework.demo;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.ubtrobot.mini.speech.framework.demo.MainActivity.FileUploadTask;
+// uncomment the line below to upload the audio file to flask server
+//import com.ubtrobot.mini.speech.framework.demo.MainActivity.FileUploadTask;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -25,12 +26,9 @@ public class PcmToWavConverter {
             fos.close();
             Log.i("Pcm To Wav Converter", "Pcm to Wav conversion completed");
 
-            //upload file to flask server (laptop) in background
-
-            //Wifi: IC Mesh
-//            AsyncTask<String, Void, Boolean> task = new FileUploadTask().execute(wavFile.getPath(), "http://192.168.4.164:5000/upload");
-            //Wifi: W402e
-            AsyncTask<String, Void, Boolean> task = new FileUploadTask().execute(wavFile.getPath(), "http://192.168.49.196:5000/upload");
+            // upload file to flask server (laptop) in background
+            // uncomment the line below to upload the file
+//            AsyncTask<String, Void, Boolean> task = new FileUploadTask().execute(wavFile.getPath(), "your-flask-server-url");
 
 
         } catch (IOException e) {

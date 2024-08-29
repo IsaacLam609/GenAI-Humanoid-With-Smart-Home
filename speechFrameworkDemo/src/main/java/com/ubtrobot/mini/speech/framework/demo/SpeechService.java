@@ -129,7 +129,7 @@ public class SpeechService{
             @Override
             public boolean onSingleClick(KeyEvent event){
                 Log.d("SingleClickReceiver","onSingleClicked:"+event);
-//                stopSynthesizing();
+                stopSynthesizing();
                 return true;
             }
 

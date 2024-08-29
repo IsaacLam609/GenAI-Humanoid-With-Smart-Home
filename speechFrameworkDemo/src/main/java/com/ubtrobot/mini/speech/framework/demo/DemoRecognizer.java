@@ -35,26 +35,26 @@ public class DemoRecognizer extends AbstractRecognizer {
   public DemoRecognizer(TencentVadRecorder recorder) {
     this.recorder = recorder;
 
-    //register state listener for Tencent Vad Recorder
-    recorder.registerStateListener(new AudioRecordStateListener() {
-      @Override
-      public void onStateChanged(int i, RecordException e) {
-        //int i: new state
+//    //register state listener for Tencent Vad Recorder
+//    recorder.registerStateListener(new AudioRecordStateListener() {
+//      @Override
+//      public void onStateChanged(int i, RecordException e) {
+//        //int i: new state
+//
+//        if (recorder.getState() == STATE_SPEAK_END) {
+//          Log.i("Demo Recognizer", "Finished Speaking.");
+//          stopRecognizing();
+//          if (recorder.isBeamformingEnabled()) {
+//            boolean stopBeamForming = recorder.disableBeamforming();
+//          }
+//        }
+//        if ((recorder.getState() == STATE_RECORDING) && (!recorder.isBeamformingEnabled())) {
+//          boolean startBeamForming = recorder.enableBeamforming();
+//        }
+//      }
+//    });
 
-        if (recorder.getState() == STATE_SPEAK_END) {
-          Log.i("Demo Recognizer", "Finished Speaking.");
-          stopRecognizing();
-          if (recorder.isBeamformingEnabled()) {
-            boolean stopBeamForming = recorder.disableBeamforming();
-          }
-        }
-        if ((recorder.getState() == STATE_RECORDING) && (!recorder.isBeamformingEnabled())) {
-          boolean startBeamForming = recorder.enableBeamforming();
-        }
-      }
-    });
-
-    byteArrayOutputStream = new ByteArrayOutputStream();
+//    byteArrayOutputStream = new ByteArrayOutputStream();
     recorder.registerRecordListener(new AudioRecordListener() {
       //onRecord() is called when TencentVadRecorder detects someone speaking
       @Override public void onRecord(byte[] asrData, int length) {
@@ -62,9 +62,9 @@ public class DemoRecognizer extends AbstractRecognizer {
         //****************** BITS PER SAMPLE IS IN FACT 16 BITS NOT 8 BITS ******************
         //Receive the recording data of microphone output in line here
 
-        Log.i("Demo Recognizer", "Demo Recognizer - onRecord.");
+//        Log.i("Demo Recognizer", "Demo Recognizer - onRecord.");
         //append the incoming asrData to byteArrayOutputStream
-        byteArrayOutputStream.write(asrData, 0, length);
+//        byteArrayOutputStream.write(asrData, 0, length);
       }
     }, null, null);
   }
@@ -79,48 +79,24 @@ public class DemoRecognizer extends AbstractRecognizer {
     if (recorder.getState() != STATE_IDLE) {
       recorder.stop();
 
-      Log.i("Demo Recognizer", "Stop Recognizing.");
-
-      byte[] recordedData = byteArrayOutputStream.toByteArray();
-      PcmToWavConverter.convertPcmToWav(recordedData);
-      //clear the content of byteArrayOutputStream
-      byteArrayOutputStream.reset();
+//      Log.i("Demo Recognizer", "Stop Recognizing.");
+//
+//      byte[] recordedData = byteArrayOutputStream.toByteArray();
+//      PcmToWavConverter.convertPcmToWav(recordedData);
+//      //clear the content of byteArrayOutputStream
+//      byteArrayOutputStream.reset();
 
       //start the recorder again for continuous conversation
       //the recorder should be started after the response is played
       //a timeout should be set to stop the recording when there is no voice activity detected
 //      recorder.start();
 
-    } else {
+    }
+//    else {
 
       //stopRecognizing() will be called on second wake up by default
-      Log.i("Demo Recognizer", "State already idle, no need to stop the recorder");
-    }
-
-  //    //play audio file
-  //    MasterSkill tempskill = new MasterSkill() {
-  //      @Override
-  //      protected void onSkillStart() {
-  //      }
-  //      @Override
-  //      protected void onSkillStop(SkillStopCause skillStopCause) {
-  //      }
-  //    };
-  //
-  //    VoiceProto.Source sourceValue = VoiceProto.Source.forNumber(2);
-  //    try {
-  //      MiniMediaPlayer player = MiniMediaPlayer.create(tempskill, sourceValue);
-  //      Log.i("Demo Recognizer", "1");
-  //      player.setDataSource("/data/user/0/com.ubtrobot.mini.speech.framework.demo/files/audiofile.wav");
-  //      Log.i("Demo Recognizer", "2");
-  //      player.prepare();
-  //      Log.i("Demo Recognizer", "3");
-  //      player.start();
-  //      Log.i("Demo Recognizer", "Audio file played successfully");
-  //    } catch (VoiceException | IOException e) {
-  ////      } catch (VoiceException e) {
-  //      throw new RuntimeException(e);
-  //    }
+//      Log.i("Demo Recognizer", "State already idle, no need to stop the recorder");
+//    }
 
   }
 
