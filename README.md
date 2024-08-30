@@ -37,6 +37,7 @@ The project utilizes Azure Speech Services and OpenAI Services for speech recogn
   ![Flowchart](AlphaMini%20Flowchart.png)
 
 ## Acknowledgements
+- [Project documentation](https://isaaclam609.github.io/GenAI-Humanoid-With-Smart-Home/)
 - [AlphaMini SDK](https://docs.ubtrobot.com/alphamini/#/en-us/)
 - [Home Assistant documentation](https://www.home-assistant.io/docs/)
 - [Azure Speech Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
