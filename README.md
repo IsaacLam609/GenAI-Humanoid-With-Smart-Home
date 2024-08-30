@@ -26,8 +26,8 @@ The project utilizes Azure Speech Services and OpenAI Services for speech recogn
 - **Components:**
   - **AlphaMini Robot**: The humanoid robot.
   - **Home Assistant**: The platform for managing smart home devices.
-    - **Speech Service**: The middleware facilitating communication between the AlphaMini robot and the user. 
-      The built-in speech service is not used due to limited languages supported.
+  - **Speech Service**: The middleware facilitating communication between the AlphaMini robot and the user. 
+    The built-in speech service is not used due to limited languages supported.
 
 - **Flow:**
   1. User interacts verbally with AlphaMini.
