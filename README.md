@@ -1,7 +1,10 @@
 # Humanoid Speech Service Integration with Smart Elderly Home
-(Refer to the [SpeechService class](speechFrameworkDemo/src/main/java/com/ubtrobot/mini/speech/framework/demo/SpeechService.java) for details of the coding implementation.)
+(Refer to the [SpeechService](speechFrameworkDemo/src/main/java/com/ubtrobot/mini/speech/framework/demo/SpeechService.java) 
+class for details of the coding implementation.)
 ## Introduction
-This project focuses on developing a speech service for the humanoid robot AlphaMini, enabling natural conversations with users and seamless control of smart home devices through the Home Assistant platform. The goal is to enhance the living experience of elderly individuals by providing companionship and assistance in managing their smart home environment.
+This project focuses on developing a speech service for the humanoid robot AlphaMini, 
+enabling natural conversations with users and seamless control of smart home devices through the Home Assistant platform. 
+The goal is to enhance the living experience of elderly individuals by providing companionship and assistance in managing their smart home environment.
 The project utilizes Azure Speech Services and OpenAI Services for speech recognition, speech synthesis and advanced natural language processing.
 
 ## Features
@@ -23,7 +26,8 @@ The project utilizes Azure Speech Services and OpenAI Services for speech recogn
 - **Components:**
   - **AlphaMini Robot**: The humanoid robot.
   - **Home Assistant**: The platform for managing smart home devices.
-  - **Speech Service**: The middleware facilitating communication between the AlphaMini robot and the user. The built-in speech service is not used due to limited languages supported.
+    - **Speech Service**: The middleware facilitating communication between the AlphaMini robot and the user. 
+      The built-in speech service is not used due to limited languages supported.
 
 - **Flow:**
   1. User interacts verbally with AlphaMini.
