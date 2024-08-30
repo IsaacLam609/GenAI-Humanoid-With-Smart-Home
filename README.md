@@ -2,6 +2,7 @@
 
 ## Introduction
 This project focuses on developing a speech service for the humanoid robot AlphaMini, enabling natural conversations with users and seamless control of smart home devices through the Home Assistant platform. The goal is to enhance the living experience of elderly individuals by providing companionship and assistance in managing their smart home environment.
+The project utilizes Azure Speech Services and OpenAI Services for speech recognition, speech synthesis and advanced natural language processing.
 
 ## Features
 - Natural language processing for conversational interactions
@@ -30,3 +31,9 @@ This project focuses on developing a speech service for the humanoid robot Alpha
   3. Natural language processing: AlphaMini sends the text to Home Assistant for and gets the text response.
   4. Speech synthesis: AlphaMini sends the text response to Azure and plays the audio response.
   ![Flowchart](AlphaMini%20Flowchart.png)
+
+## Acknowledgements
+- [AlphaMini SDK](https://docs.ubtrobot.com/alphamini/#/en-us/)
+- [Home Assistant documentation](https://www.home-assistant.io/docs/)
+- [Azure Speech Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+- [Azure OpenAI Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/)
