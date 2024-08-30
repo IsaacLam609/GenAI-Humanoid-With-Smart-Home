@@ -29,3 +29,4 @@ This project focuses on developing a speech service for the humanoid robot Alpha
   2. Speech recognition: AlphaMini sends the audio to Azure and gets the recognized text message.
   3. Natural language processing: AlphaMini sends the text to Home Assistant for and gets the text response.
   4. Speech synthesis: AlphaMini sends the text response to Azure and plays the audio response.
+  ![Flowchart](AlphaMini%20Flowchart.png)
