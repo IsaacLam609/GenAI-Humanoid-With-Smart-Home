@@ -81,7 +81,7 @@ public class SpeechApplication extends AbstractSpeechApplication {
                     moduleCreatedNotifier.notifyModuleCreated(DemoSpeech.INSTANCE.createSpeechService());
                 }));
 
-        // speech service
+        // initialize speech service
         com.ubtrobot.mini.speech.framework.demo.SpeechService speechService = new com.ubtrobot.mini.speech.framework.demo.SpeechService();
         speechService.subscribeToWakeup();
     }
