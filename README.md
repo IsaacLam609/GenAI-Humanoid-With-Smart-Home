@@ -32,8 +32,8 @@ The project utilizes Azure Speech Services and OpenAI Services for speech recogn
 - **Flow:**
   1. User interacts verbally with AlphaMini.
   2. Speech recognition: AlphaMini sends the audio to Azure and gets the recognized text message.
-  3. Natural language processing: AlphaMini sends the text to Home Assistant for and gets the text response.
-  4. Speech synthesis: AlphaMini sends the text response to Azure and plays the audio response.
+  3. Natural language processing: AlphaMini sends the recognized text to Home Assistant for and gets the text response.
+  4. Speech synthesis: AlphaMini sends the text response to Azure and plays the synthesized audio response.
   ![Flowchart](AlphaMini%20Flowchart.png)
 
 ## Acknowledgements
