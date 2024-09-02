@@ -1,6 +1,6 @@
 # Humanoid Speech Service Integration with Smart Elderly Home
 (Refer to the [SpeechService](speechFrameworkDemo/src/main/java/com/ubtrobot/mini/speech/framework/demo/SpeechService.java) 
-class for details of the coding implementation of this project.)
+class for details of the coding implementation of this project.)<br>
 This project is developed together with [Home Assistant OpenAI Integration](https://github.com/IsaacLam609/Home-Assistant-OpenAI-Integration/blob/main/README.md).
 ## Introduction
 This project focuses on developing a speech service for the humanoid robot AlphaMini, 
