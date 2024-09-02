@@ -10,16 +10,16 @@ The project utilizes Azure Speech Services and OpenAI Services for speech recogn
 ## Features
 - Natural language processing for conversational interactions
 - Speech recognition (speech to text) and speech synthesis (text to speech)
-- Integration with Home Assistant for smart device control
+- Stop playing audio response on a head tap
+- Integration with Home Assistant for smart home device control
 - News reporting summarized by large language models
 - Calendar event creation and management
 - Shopping list management
-- User-friendly dashboard for both end users and developers
 
 ## Usage
 - Start the AlphaMini robot.
 - Initiate a conversation by saying "Hey, Mini."
-- Respond accordingly when the AlphaMini robot asks for confirmation before controlling smart devices.
+- Respond accordingly when the AlphaMini robot asks for confirmation before controlling smart home devices.
 - The conversation session will end automatically after a duration a silence.
 
 ## Architecture
