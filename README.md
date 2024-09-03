@@ -3,7 +3,7 @@
 class for details of the coding implementation of this project.)<br>
 This project is developed together with [Home Assistant OpenAI Integration](https://github.com/IsaacLam609/Home-Assistant-OpenAI-Integration/blob/main/README.md).
 ## Introduction
-This project focuses on developing a speech service for the humanoid robot AlphaMini, 
+This project focuses on developing a speech service for the humanoid robot AlphaMini (embedded with the UBTech ROS Android system), 
 enabling natural conversations with users and seamless control of smart home devices through the Home Assistant platform. 
 The goal is to enhance the living experience of elderly individuals by providing companionship and assistance in managing their smart home environment.
 The project utilizes Azure Speech Services and OpenAI Services for speech recognition, speech synthesis and advanced natural language processing.
@@ -25,7 +25,7 @@ The project utilizes Azure Speech Services and OpenAI Services for speech recogn
 
 ## Architecture
 - **Components:**
-  - **AlphaMini Robot**: The humanoid robot.
+  - **AlphaMini Robot**: The humanoid robot embedded with the UBTech ROS Android system.
   - **Home Assistant**: The platform for managing smart home devices.
   - **Speech Service**: The middleware facilitating communication between the AlphaMini robot and the user. 
     The built-in speech service is not used due to limited languages supported.
