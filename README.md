@@ -6,9 +6,9 @@ This project is developed together with [Home Assistant OpenAI Integration](http
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
-- [Video Demonstration](#video-demonstration)
+- [Video Demonstration](#video-demonstration) (English and Cantonese)
 - [Usage](#usage)
-- [Architecture](#architecture)
+- [Architecture](#architecture) (with flowchart)
 - [Acknowledgements](#acknowledgements)
 
 ## Introduction
