@@ -58,6 +58,7 @@ public class SpeechService{
     private static final String SegmentationSilenceTimeoutMs = "500";
     /** Speech recognition language. */
     private static final String RecognitionLanguage = "zh-HK";
+//    private static final String RecognitionLanguage = "en-US";
     private SpeechRecognizer recognizer = null;
     private AudioConfig audioInput = null;
     private SpeechConfig recognizerSpeechConfig;
@@ -80,6 +81,7 @@ public class SpeechService{
     // Azure speech synthesis
     /** Speech synthesis voice name. */
     private final String SynthesisVoiceName = "zh-HK-HiuMaanNeural";
+//    private final String SynthesisVoiceName = "en-US-AriaNeural";
     private SpeechConfig synthesisSpeechConfig;
     private SpeechSynthesizer synthesizer;
     private Connection synthesisConnection;
