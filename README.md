@@ -17,6 +17,44 @@ The project utilizes Azure Speech Services and OpenAI Services for speech recogn
 - Calendar event creation and management
 - Shopping list management
 
+## Video Demonstration
+(Eng) Controlling Smart Home Devices
+
+
+https://github.com/user-attachments/assets/2e9e9296-93cd-4ba3-94fa-766e808e5eb9
+
+
+(Eng) Weather Forecast
+
+
+https://github.com/user-attachments/assets/51fc6eee-9077-4f3d-8d0e-31cdde4d745d
+
+
+(Eng) Calendar Event Management
+
+
+https://github.com/user-attachments/assets/f3c7bcb3-b269-4fff-8df3-31f9058d8921
+
+
+(Chin) Controlling Smart Home Devices
+
+
+https://github.com/user-attachments/assets/d8f2df37-f3d8-4954-8bb1-b4e9df0fc452
+
+
+(Chin) Weather Forecast
+
+
+https://github.com/user-attachments/assets/3d33999c-616d-4a40-a900-6ab9a4505896
+
+
+(Chin) Calendar Event Management
+
+
+https://github.com/user-attachments/assets/cd8710da-b4d2-490a-92d6-d4dc2a2a1379
+
+
+
 ## Usage
 - Start the AlphaMini robot.
 - Initiate a conversation by saying "Hey, Mini."
